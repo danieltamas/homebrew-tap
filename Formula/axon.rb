@@ -1,25 +1,25 @@
 class Axon < Formula
   desc "Local, harness-agnostic observability for AI coding agents — one binary, in your browser."
   homepage "https://github.com/danieltamas/axon"
-  version "0.4.8"
+  version "0.4.9"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/danieltamas/axon/releases/download/v0.4.8/axon-aarch64-apple-darwin.tar.xz"
-      sha256 "f9c4b17b8e7a91a6d0364fe84e6aaa3213543b1e13eec19c92cab6dceb818a13"
+      url "https://github.com/danieltamas/axon/releases/download/v0.4.9/axon-aarch64-apple-darwin.tar.xz"
+      sha256 "e0425e312d6a8fc8cd1e7ac82c5f30621ae7e3635bd42c4ab0e2294c7bfab24f"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/danieltamas/axon/releases/download/v0.4.8/axon-x86_64-apple-darwin.tar.xz"
-      sha256 "b353268f4686a16ddd06029f343f8204209baee09f38a8cb725984b4421fae58"
+      url "https://github.com/danieltamas/axon/releases/download/v0.4.9/axon-x86_64-apple-darwin.tar.xz"
+      sha256 "d7b038a715575baf0337079ad70f6c50f594a695fb430ee2ed0530e87794c333"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/danieltamas/axon/releases/download/v0.4.8/axon-aarch64-unknown-linux-musl.tar.xz"
-      sha256 "7b6945299423db8295abd64fcea2604ef8ceb0ee1c5e940da365ae4c560a2e42"
+      url "https://github.com/danieltamas/axon/releases/download/v0.4.9/axon-aarch64-unknown-linux-musl.tar.xz"
+      sha256 "25ed50151cb30b0719fc78f5d3f890072cd393c0ee7a8ffa742e4e972749c835"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/danieltamas/axon/releases/download/v0.4.8/axon-x86_64-unknown-linux-musl.tar.xz"
-      sha256 "92a9c36ca47c01c908c2757591395d271da24baf88bfc2b3b9f3b510e6fe7627"
+      url "https://github.com/danieltamas/axon/releases/download/v0.4.9/axon-x86_64-unknown-linux-musl.tar.xz"
+      sha256 "4a1c7e2b039e3343d35d30fecf0d05efb9a209ca33ff13a66a0bb0f741493521"
     end
   end
   license "MIT"
