@@ -1,0 +1,38 @@
+cask "macmax" do
+  version "0.1.4"
+  sha256 "229953a37a42bee4b44e969900f048463a877cfb53b93fb67d367fd9423f7a2e"
+
+  url "https://github.com/danieltamas/macmax/releases/download/v#{version}/MacMax-#{version}.zip"
+  name "MacMax"
+  desc "Why your computer is slow: per-app CPU, memory, disk, network, safe cleanup"
+  homepage "https://github.com/danieltamas/macmax"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
+  depends_on macos: :ventura
+
+  app "MacMax.app"
+  binary "#{appdir}/MacMax.app/Contents/Resources/macmax"
+
+  # The app is signed ad hoc, not notarized. The curl installer leaves no quarantine flag, so the
+  # app opens at once; the cask matches it instead of sending the user to System Settings.
+  postflight_steps do
+    run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "{{appdir}}/MacMax.app"],
+                          writable_paths: ["MacMax.app"], writable_base: :appdir
+  end
+
+  uninstall quit: "ro.danieltamas.macmax"
+
+  zap trash: [
+    "~/.macmax",
+    "~/Library/Preferences/ro.danieltamas.macmax.plist",
+  ]
+
+  caveats <<~EOS
+    MacMax updates itself from Settings, About. After such an update, run
+    brew upgrade --cask macmax once so Homebrew's record matches the installed version.
+  EOS
+end
