@@ -33,6 +33,6 @@ cask "macmax" do
 
   caveats <<~EOS
     MacMax updates itself from Settings, About. After such an update, run
-    brew upgrade --cask macmax once so Homebrew's record matches the installed version.
+    brew upgrade --cask danieltamas/tap/macmax once so Homebrew's record matches.
   EOS
 end
