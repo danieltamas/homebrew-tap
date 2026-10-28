@@ -1,6 +1,6 @@
 cask "macmax" do
-  version "0.4.0"
-  sha256 "6dc871e96dc3a9026b0f612df1dda621a50fa831b659160246f3422d3d39ecb5"
+  version "0.4.1"
+  sha256 "7ec37a421aeb92ad62c0080aa58dbd5d5a75a3bafac24838c87fa2a14df2f7ce"
 
   url "https://github.com/danieltamas/macmax/releases/download/v#{version}/MacMax-#{version}.zip"
   name "MacMax"
