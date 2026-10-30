@@ -1,6 +1,6 @@
 cask "rmj" do
-  version "0.6.2"
-  sha256 "9a2ebce579867f17e847551e9583c55f5bd5faffd93240b84afcd8d87e430d43"
+  version "0.7.0"
+  sha256 "d3bc5ca8ba20ec3ead992426dd3fe23c5f93fad44747cdffe09b60431c5d35c7"
 
   url "https://github.com/danieltamas/runmyjob/releases/download/v#{version}/RMJ-#{version}.zip"
   name "RMJ"
