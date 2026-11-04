@@ -1,6 +1,6 @@
 cask "agencil" do
-  version "0.4.0"
-  sha256 "1533743b8be159430cd4fe9ab254aed4ed7629acba6ce44a42f50f6cca30e911"
+  version "0.4.1"
+  sha256 "986fa6fa26ed58c069a20c9d48552a99bb35ea85993a9b95bb07cc15bf73d8ea"
 
   url "https://github.com/danieltamas/agencil/releases/download/v#{version}/Agencil-#{version}-adhoc.zip"
   name "Agencil"
